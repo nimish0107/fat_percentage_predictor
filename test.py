@@ -20,7 +20,7 @@ def test(age: int, gender: str, weight: float, height: float, max_bpm: int, avg_
        'Workout_Frequency (days/week)', 'Experience_Level', 'BMI']
     data = [age,gender,weight,height,max_bpm,avg_bpm,resting_bpm,session_duration,calories_burned,workout_type,water_intake,workout_frequency,experience_level,bmi]
     X_test = pd.DataFrame([data], columns=columns)
-    model = joblib.load('model/lr_model.pkl')
+    model = joblib.load('model/best_model.pkl')
     encoder = joblib.load('model/workout_type_encoder.pkl')
     scaler = joblib.load('model/minmax_scaler.pkl')
 
